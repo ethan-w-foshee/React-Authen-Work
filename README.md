@@ -19,7 +19,7 @@ Clone this repo and run `npm i` and then `npm start`
 
 - Upon making the changes to these `Route`'s you should notice that you can no longer access any of the links in the navigation bar. They send you back to the login page because there is no cookie available. Let's make sure we set one when we log in.
 
-- Go to the `Login` component (under `src/components/Login.js`) and look at the login function. There is a comment to a the cookie. Set a cookie equal to the following value: `loggedIn=true;max-age=60*1000`.
+- Go to the `Login` component (under `src/components/Login.js`) and look at the login function. There is a comment to a the cookie. Set a cookie equal to the following value: `loggedIn=true;max-age=60`.
 
 - Notice you can now login and access the pages appropriately. We've set an expiration time of one minute on the cookie so go do something else for a minute and then come back to this site. Refresh the page. Were you directed back to the login page?
 

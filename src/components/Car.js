@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Container, Paper, Chip } from "@mui/material";
 import cars from "../cars.json";
 
-const Car = (props) => {
+function Car(props) {
   const id = useParams().id;
   const car = cars.find((c) => c.id === Number(id));
 

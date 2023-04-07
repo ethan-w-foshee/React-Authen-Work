@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container } from "@mui/material";
+import cookie from 'cookie'
 
-const Login = () => {
+function Login() {
   const navigate = useNavigate();
 
   const [state, setState] = useState({
@@ -10,7 +11,7 @@ const Login = () => {
     password: "",
   });
 
-  const handleTextChange = (e) => {
+  function handleTextChange(e) {
     const { name, value } = e.target;
     setState((prevState) => {
       return {
@@ -20,10 +21,11 @@ const Login = () => {
     });
   };
 
-  const login = (e) => {
+  function login(e) {
     e.preventDefault();
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
+    document.cookie = cookie.serialize("loggedIn", "true", {maxAge: 60})
 
     navigate("/");
   };

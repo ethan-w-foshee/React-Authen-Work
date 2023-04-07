@@ -2,12 +2,15 @@
   "name": "411_wk4_day1_react_router",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ethan-w-foshee.github.io/react-authen-work/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.2",
     "@mui/material": "^5.8.2",
     "cookie": "^0.4.0",
+    "eslint": "^5.16.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
@@ -16,6 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
